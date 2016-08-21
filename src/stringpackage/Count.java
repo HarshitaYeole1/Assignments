@@ -19,6 +19,8 @@ public class Count {
 
         while (sc.hasNext()) {
             String str = sc.next();
+            str=str.toLowerCase();             //to ignore cases
+            
             if (m.containsKey(str)) {          //if key already exists in map
                 Integer count = m.get(str);    //get its value
                 m.put(str, count + 1);         //increment value and store the key-value

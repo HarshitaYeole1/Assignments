@@ -18,12 +18,25 @@ public class StringCount {
     public static void main(String[] args) throws IOException {
 
         //Write content into file
-        FileWriter f = new FileWriter("input.txt");
-        f.append("Hello, my name is Harshita Yeole. I am a Software Engineer. I am an Engineer from Cummins college. I work in Equal Experts. Equal Experts is an excellent company. Equal experts and I would have a long way ahead. I am a Software Engineer in Equal Experts.");
-        f.close();
+       // FileWriter f = new FileWriter("input.txt");
+        //f.append("Hello, my name is Harshita Yeole. I am a Software Engineer. I am an Engineer from Cummins college. I work in Equal Experts. Equal Experts is an excellent company. Equal experts and I would have a long way ahead. I am a Software Engineer in Equal Experts.");
+        //f.close();
 
+        FileReader file=null;
+        try
+        {
+            System.out.println("Enter filename: ");
+            String filename=sc.next();
+
+            file=new FileReader(filename);
+
+        }
+        catch (FileNotFoundException fe)
+        {
+            System.out.println("The file is not found.");
+        }
         //read contents of value
-        FileReader file = new FileReader("input.txt");
+        //FileReader file = new FileReader("input.txt");
 
         //ask for occurence count to the user
         System.out.println("Enter the minimum number of occurence: ");
